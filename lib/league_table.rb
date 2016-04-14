@@ -116,8 +116,8 @@ class LeagueTable
 	end
 end
 
-lt = LeagueTable.new
-lt.add_match("Man Utd 3 - 1 Liverpool")
-lt.add_match("Man Utd 1 - 9 Arsenal")
-puts "Wins: #{lt.get_wins("Masdvn Utd")}"
-puts "Points: #{lt.get_points("Arsenal")}"
+# lt = LeagueTable.new
+# lt.add_match("Man Utd 3 - 1 Liverpool")
+# lt.add_match("Man Utd 1 - 9 Arsenal")
+# puts "Wins: #{lt.get_wins("Masdvn Utd")}"
+# puts "Points: #{lt.get_points("Arsenal")}"
