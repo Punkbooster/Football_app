@@ -59,7 +59,7 @@ class LeagueTable
 
 		teams[name2].goals += score2
 		teams[name2].conceeded += score1
-
+    puts teams
 	end
 
 	def parse_score(str)
@@ -90,36 +90,34 @@ class LeagueTable
 	def get_goal_difference(team_name) # Return the no. of goals a team has scored minus the no. of goals a team has conceeded, 0 by default
 		if teams[team_name]
 			teams[team_name].goals - teams[team_name].conceeded
-		else puts error
+		else puts error # raise NameError, error (doesn't works with test for some reason)
 		end
 	end
 
 	def get_wins(team_name) # Return the no. of wins a team has, 0 by default
 		if teams[team_name]
 			teams[team_name].wins
-		else puts error
+		else puts error # raise NameError, error (doesn't works with test for some reason)
 		end
 	end
 
 	def get_draws(team_name) # Return the no. of draws a team has, 0 by default
 		if teams[team_name]
-			teams[team_name].drawes
-		else puts error
+			teams[team_name].draws
+		else puts error # raise NameError, error (doesn't works with test for some reason)
 		end
 	end
 
 	def get_losses(team_name) # Return the no. of losses a team has, 0 by default
 		if teams[team_name]
 			teams[team_name].loses
-		else puts error
+		else raise NameError, error
 		end
 	end
-
-
 end
 
 lt = LeagueTable.new
 lt.add_match("Man Utd 3 - 1 Liverpool")
 lt.add_match("Man Utd 1 - 9 Arsenal")
-puts "Wins: #{lt.get_wins("Man Utd")}"
+puts "Wins: #{lt.get_wins("Masdvn Utd")}"
 puts "Points: #{lt.get_points("Arsenal")}"
